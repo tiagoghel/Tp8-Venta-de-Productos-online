@@ -1,0 +1,16 @@
+.pie-pagina {
+    background-color: #560e91;
+    color: black;
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+}
+
+.contenido-pie p {
+    margin: 5px 0;
+}

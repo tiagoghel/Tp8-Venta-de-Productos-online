@@ -1,0 +1,99 @@
+/* Paleta de colores moderna y atractiva */
+:root {
+  --primary-color: #6366f1;
+  --secondary-color: #8b5cf6;
+  --accent-color: #06b6d4;
+  --background-color: #f8fafc;
+  --card-background: #ffffff;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --border-color: #e2e8f0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --hover-shadow: rgba(0, 0, 0, 0.15);
+}
+
+
+.card-producto {
+  background: var(--card-background);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.card-producto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px var(--hover-shadow);
+  border-color: var(--primary-color);
+}
+
+.card-producto__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.card-producto__content {
+  padding: 1.5rem;
+}
+
+.card-producto__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+}
+
+.card-producto__price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0.5rem 0;
+}
+
+.card-producto__link {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 100%;
+}
+
+.card-producto__link:hover {
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+  .card-producto {
+    max-width: 100%;
+    margin: 0 0.5rem;
+  }
+  
+  .card-producto__content {
+    padding: 1rem;
+  }
+  
+  .card-producto__title {
+    font-size: 1.1rem;
+  }
+  
+  .card-producto__price {
+    font-size: 1.25rem;
+  }
+}
+
+.card-producto {
+  animation: fadeIn 0.5s ease-out;
+}

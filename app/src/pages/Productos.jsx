@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import api from '../../api/api';
+import CardProducto from '../components/CardProducto';
 
 const Productos = () => {
     const { idCategoria } = useParams();
@@ -34,19 +35,12 @@ const Productos = () => {
     if (error) return <div className="error">Error: {error}</div>;
 
     return (
-        <div className="productos-container">
-            <h1>{idCategoria ? `Productos en ${idCategoria}` : 'Todos los Productos'}</h1>
+        <div className="productos-container" style={{ maxWidth: '1200px', margin: '2rem auto', padding: '0 1rem' }}>
+            <h1 style={{ color: '#007AFF', marginBottom: '1.5rem' }}>{idCategoria ? `Productos en ${idCategoria}` : 'Todos los Productos'}</h1>
             
-            <div className="productos-grid">
+            <div className="productos-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '2rem' }}>
                 {products.map((product) => (
-                    <div key={product.id} className="producto-card">
-                        <Link to={`/productos/${product.id}`}>
-                            <img src={product.thumbnail} alt={product.title} />
-                            <h3>{product.title}</h3>
-                            <p className="price">${product.price}</p>
-                            <p className="description">{product.description.substring(0, 100)}...</p>
-                        </Link>
-                    </div>
+                    <CardProducto key={product.id} product={product} />
                 ))}
             </div>
         </div>

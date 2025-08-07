@@ -1,0 +1,132 @@
+.producto-detalle-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  font-family: var(--font-family-primary);
+  color: var(--gray-800);
+  background-color: var(--gray-50);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: var(--primary-hover);
+}
+
+.producto-detalle {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.producto-imagen {
+  flex: 1 1 400px;
+  max-width: 400px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.producto-imagen img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.producto-info {
+  flex: 2 1 500px;
+}
+
+.producto-info h1 {
+  font-family: var(--font-family-secondary);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.categoria {
+  font-size: 1rem;
+  color: var(--gray-600);
+  margin-bottom: 1rem;
+}
+
+.precio {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.descripcion {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: var(--gray-700);
+}
+
+.producto-detalles h3 {
+  font-family: var(--font-family-secondary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.producto-detalles ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  color: var(--gray-700);
+}
+
+.producto-detalles ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.add-to-cart-btn {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .producto-detalle {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .producto-imagen,
+  .producto-info {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .producto-info h1 {
+    font-size: 2rem;
+  }
+
+  .precio {
+    font-size: 1.5rem;
+  }
+}

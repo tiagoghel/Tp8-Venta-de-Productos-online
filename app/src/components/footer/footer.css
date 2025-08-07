@@ -1,16 +1,75 @@
-.pie-pagina {
-    background-color: #560e91;
-    color: black;
-    padding: 20px;
-    font-family: 'Segoe UI', sans-serif;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    left: 0;
-    z-index: 1000;
+.footer {
+  background-color: #f8f8f8;
+  padding: 3rem 0;
+  color: #48484A;
+  font-family: var(--font-family-primary);
+  font-size: 0.9rem;
+  border-top: 1px solid #ddd;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.contenido-pie p {
-    margin: 5px 0;
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  min-width: 180px;
+}
+
+.footer-section h3 {
+  font-family: var(--font-family-secondary);
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #007AFF;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section a {
+  color: #48484A;
+  text-decoration: none;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a:hover {
+  color: #0056CC;
+}
+
+.social-links a {
+  margin-right: 1rem;
+  color: #48484A;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #007AFF;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 }
